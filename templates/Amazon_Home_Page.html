@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <title>Amazon Home Page</title>
+</head>
+<body>
+	<h3>
+	{{Rest}}
+	</h3>
+	<form>
+		Product ID:
+		<input type="text" name="pID">
+		<br />
+		<input id="submit" type="submit">
+	</form>
+	<h3>
+	The product ID has been added:
+	</h3>
+	{% for product in ProductList %}
+		<li><a href="{{product.ProductID}}">
+		{{product.ProductID}}</a>
+		{{product.ProductName}}
+		</li>
+	{% endfor %}
+</body>
+</html>

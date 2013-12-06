@@ -1,0 +1,14 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <title>Amazon Price</title>
+</head>
+<body>
+	ProductID:{{Product.ProductID}}<br/>
+	ProductName:{{Product.ProductName}}<br/>
+	{% for dp in Product.DatePrice %}
+		<li>DateTime:{{dp.Date}}</li>
+		<li>Price:{{dp.Price}}</li>
+	{% endfor %}
+</body>
+</html>

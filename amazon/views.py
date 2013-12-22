@@ -24,8 +24,8 @@ def Amazon_Home_Page(request):
     a = Amazon_class()
     ProductList = a.ReturnAllID()
     if query:
-        pID = GetPid(query)#use this line to use the url as the input
-        # pID = query#use this line to use ID as the input
+        # pID = GetPid(query)#use this line to use the url as the input
+        pID = query#use this line to use ID as the input
         print pID
         a.ProductID = pID
         rest = a.UpdateDatePrice()

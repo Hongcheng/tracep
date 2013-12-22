@@ -23,7 +23,8 @@ amazonip = 'http://203.81.17.130'
 def GetThePrice(self):
     # if self.ProductID == None:
     #     return None,None
-    purl = amazonip+'/gp/twister/ajax/prefetch?parentAsin='+self.ProductID+'&asinList='+self.ProductID
+    # purl = amazonip+'/gp/twister/ajax/prefetch?parentAsin='+self.ProductID+'&asinList='+self.ProductID
+    purl = ''.join([amazonip,'/gp/twister/ajax/prefetch?parentAsin=',self.ProductID,'&asinList=',self.ProductID])
     try:
         pr = requests.get(purl)
     except:
